@@ -1,0 +1,122 @@
+apiVersion: 2018-10-01
+location: northeurope
+name: acitestlimit
+properties:
+  containers:
+  - name: containerwithload
+    properties:
+      image: polinux/stress
+      command:
+        - 'sh'
+        - '-c'
+        - 'stress --cpu 4 --verbose'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+        limits:
+          cpu: 4.0
+  - name: dummywithoutload0
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload1
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload2
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload3
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload4
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload5
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload6
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload7
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+  - name: dummywithoutload8
+    properties:
+      image: alpine:3.10
+      command: 
+        - 'sh'
+        - '-c'
+        - 'tail -f /dev/null'
+      resources:
+        requests:
+          cpu: 0.4
+          memoryInGB: 0.2
+          
+  osType: Linux
+  restartPolicy: Always
+tags: null
+type: Microsoft.ContainerInstance/containerGroups
